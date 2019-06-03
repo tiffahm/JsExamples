@@ -27,12 +27,12 @@
             var pos = 0;
             var box = document.getElementById('box');
             var forwardInterval,backwardInterval;
-            forwardInterval = setInterval(moveForward, 0);
+            forwardInterval = setInterval(moveForward, 10);
 
             function moveBackward() {
                 if (pos === 0) {
                     clearInterval(backwardInterval);
-                    forwardInterval = setInterval(moveForward, 0);
+                    forwardInterval = setInterval(moveForward, 10);
                 } else {
                     pos -= 1;
                     box.style.left = pos + 'px';
@@ -43,7 +43,7 @@
             function moveForward() {
                 if (pos === 150) {
                     clearInterval(forwardInterval);
-                    backwardInterval = setInterval(moveBackward, 0);
+                    backwardInterval = setInterval(moveBackward, 10);
                 } else {
                     pos += 1;
                     box.style.left = pos + 'px';
